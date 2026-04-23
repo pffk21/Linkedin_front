@@ -24,18 +24,49 @@ import RequireAuth from './RequireAuth';
 
 function decodeJwtPayload(token) {
   try {
-    const payloadBase64 = token.split('.')[1];
-    const decoded = atob(payloadBase64);
-    return JSON.parse(decoded);
+    const parts = token.split('.');
+    if (parts.length !== 3) return null;
+    const payloadBase64 = parts[1];
+    const base64 = payloadBase64.replace(/-/g, '+').replace(/_/g, '/');
+    const jsonPayload = decodeURIComponent(
+      atob(base64)
+        .split('')
+        .map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2))
+        .join('')
+    );
+
+    return JSON.parse(jsonPayload);
   } catch (e) {
     console.error('JWT decoding error:', e);
     return null;
   }
 }
 
+// function decodeJwtPayload(token) {
+//   try {
+//     const payloadBase64 = token.split('.')[1];
+//     const base64 = payloadBase64.replace(/-/g, '+').replace(/_/g, '/');
+//     const decoded = atob(payloadBase64);
+//     return JSON.parse(decoded);
+//   } catch (e) {
+//     console.error('JWT decoding error:', e);
+//     return null;
+//   }
+// }
+
 function App() {
-  const [token, setToken] = useState(null);
+  const [token, setTokenState] = useState(localStorage.getItem('authToken'));
   const [user, setUser] = useState(null);
+
+
+  const setToken = (newToken) =>{
+    setTokenState(newToken);
+    if(newToken){
+      localStorage.setItem('authToken', newToken)
+    } else {
+      localStorage.removeItem('authToken')
+    }
+  }
 
   useEffect(() => {
     if (token) {
@@ -62,27 +93,52 @@ function App() {
         }
       }
     }
+    
+
+    conf = conf || {};
+    conf.headers = conf.headers || {};
+    if (!conf.headers['Content-Type']) {
+        conf.headers['Content-Type'] = 'application/json';
+    }
+
 
     fetch(url, conf)
-      .then(r => r.json())
+      .then(r => {
+          if (r.status === 401) {
+              logout();
+              reject({ message: 'Unauthorized, token expired or invalid.', status: 401 });
+              return;
+          }
+          return r.json();
+      })
       .then(j => {
-        if (j.status?.isOk) { 
-          resolve(j.data);
-          return;
+        const isActuallyOk = j.status?.isOk || j.status?.isOK || j.status?.code === 200;
 
-        } else if (j.token && j.user) { 
-          resolve(j); 
-          return; 
-        }
+        if (isActuallyOk) {
+
+          resolve(j); 
+          return;
+        } 
         
-        reject(j);
-      })
-      .catch(err => reject({ message: 'Network error', error: err }));
+
+        if (j.token && j.user) {
+          setToken(j.token);
+          resolve(j);
+          return;
+        }
+        
+
+        reject(j);
+      })
   });
+
+  const logout = () => {
+    setToken(null);
+  }
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <AppContext.Provider value={{ request, backUrl, user, setToken }}>
+      <AppContext.Provider value={{ request, backUrl, user,token, setToken, logout }}>
         <Router>
           <Routes>
             <Route path="/Linkidin" element={<LandingPage />} />
