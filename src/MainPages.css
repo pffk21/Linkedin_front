@@ -1,0 +1,43 @@
+.main_page{
+  flex: 1;
+}
+
+.container--wide{
+  display: flex;
+  max-width: 1782px;
+  margin-top: 34px;
+  margin-bottom: 50px;
+  align-items: flex-start; /* чтобы элементы не занимали всю высоту экрана 10.07 */
+}
+
+.container--chat{
+  max-width: 830px;
+}
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+  background-color: #F8F9FA;
+}
+
+
+aside{
+  flex: 0 0 415px;
+  
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 8px;
+}
+
+@media(max-width: 1600px){
+  aside{
+    flex: 0 0 315px;
+    font-size: 14px;
+  }
+
+}

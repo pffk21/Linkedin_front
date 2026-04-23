@@ -1,0 +1,176 @@
+.central-container2 {
+  font-family: 'Rubik', sans-serif;
+  gap: 24px;
+}
+
+.section2 {
+  margin-bottom: 32px;
+  border-bottom: 1px solid #6C5CE7;
+  padding: 24px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #0000001A;
+  
+}
+
+.section-title2,
+.section-subtitle2 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.subtitle2 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 16px;
+}
+
+.job-card2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px 0;
+  border-bottom: 1px solid #6C5CE7;
+}
+
+.logo-and-info2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.company-logo2 {
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.job-info2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.subtitle22 {
+  font-family: Rubik, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 4px;
+}
+
+.subtitle2 {
+  font-family: Rubik, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: black;
+  margin-bottom: 4px;
+}
+
+.salary2 {
+  font-family: Rubik, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 4px;
+}
+
+.meta2 {
+  font-family: Rubik, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.meta2 a {
+  color: #6C5CE7;
+  text-decoration: none;
+}
+
+.close-btn2 {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.close-icon2 {
+  width: 24px;
+  height: 24px;
+  opacity: 1;
+}
+
+.show-all2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #6C5CE7;
+  text-decoration: none;
+  position: relative;
+}
+
+.show-all2::after {
+  content: '⭢';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: 2px solid #6C5CE7;
+  border-radius: 50%;
+  font-size: 16px;
+  margin-left: 8px;
+}
+
+.tags2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag-btn2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  background-color: white;
+  border: 1px solid #6C5CE7;
+  padding: 5px 10px;
+  border-radius: 52px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.tag-btn2:hover {
+  background-color: #A29BFE;
+  color: #F8F9FA;
+}
+
+.tag-btn2:hover .tag-icon2 path {
+  stroke: #F8F9FA;
+}
+
+.tag-icon2 {
+  width: 20px;
+  height: 20px;
+  transition: stroke 0.2s;
+}

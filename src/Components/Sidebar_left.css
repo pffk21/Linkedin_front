@@ -1,0 +1,293 @@
+.sidebar_left{
+    padding: 48px 48px 12px 48px;
+}
+
+.homesd{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 36px;
+    border-bottom: 1.5px solid #6C5CE7;
+}
+
+.homesd img{
+    display: block; 
+    width: 128px;
+    height: 128px;
+    margin-bottom: 16px;
+}
+
+.homesd_name{
+    color: #6C5CE7;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.homesd_prof{
+    font-style: regular;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.sidebar_contacts{
+    margin: 36px 0 19px;
+}
+
+.contacts_title{
+    display: block;
+    font-size: 16px;
+    color:#6C5CE7;
+}
+
+.sidebar_saved{
+    margin: 23px 0;
+}
+
+.sidebar_href{
+    text-decoration: none;
+    color:#6C5CE7;
+}
+
+.sidebar_href img{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: bottom;
+}
+
+
+
+
+
+
+
+.networksb_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0;
+    list-style: none;
+    margin: 10px 0 36px;
+}
+
+.networksb_li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 10px 12px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    font-family: 'Rubik', sans-serif;
+    color: #333;
+    border-bottom: 1px solid #6C5CE7;
+    
+}
+
+.networksb_li:hover {
+    background-color: #f0f0f0;
+    font-weight: 500;
+    color: #111;
+}
+
+.networksb_li:last-child{
+    border-bottom: none;
+}
+
+.networksb_li img {
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+
+
+
+
+
+
+.chat-sidebar {
+    font-family: 'Rubik', sans-serif;
+    padding: 32px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    
+    
+}
+
+.chat-tabs {
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  gap: 24px; 
+  margin-bottom: 16px;
+  color:#000000;
+  margin-top: 25px;
+}
+.tab-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-top: -5px;
+}
+
+.active-tab {
+  color: #6C5CE7;
+  border-bottom: 2px solid #6c63ff;
+}
+
+.chat-search input {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #6C5CE7;
+  color: #6C5CE7;
+  font-size: 14px;
+}
+
+.chat-search input::placeholder {
+  color: #6C5CE7;
+}
+.chat-search input {
+  padding: 8px 40px 8px 50px; 
+}
+.chat-search .input-icon {
+  position: absolute;
+  left: 12px; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  margin-top: -1px;
+  pointer-events: none; 
+}
+
+.you-label {
+  color: #000000;
+  margin-right: 4px;
+}
+
+.you-text {
+  color:#A29BFE;
+}
+
+.chat-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 36px;
+}
+
+.chat-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.chat-item:hover {
+  background: #f4f4f4;
+}
+
+.chat-item.active {
+  background: #f0eaff;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.chat-info {
+  flex: 1;
+}
+
+.chat-name {
+  font-size: 14px;
+}
+
+.chat-msg {
+  font-size: 13px;
+  color: #A29BFE;
+  border-bottom: 1.5px solid #6c63ff;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+
+.chat-meta {
+  text-align: right;
+}
+
+.chat-time {
+  font-size: 12px;
+  color: #A29BFE;
+}
+
+.unread-dot {
+  width: 8px;
+  height: 8px;
+  background: #6c63ff; 
+  border-radius: 50%;
+  margin-top: 4px;
+  margin-left: auto;
+}
+
+
+
+
+
+@media(max-width: 1600px){
+    .sidebar_left{
+        padding: 28px 20px 12px 20px;
+    }
+
+    .homesd {
+        padding-bottom: 24px;
+    }
+
+    .homesd img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 12px;
+    } 
+
+    .homesd_name {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    
+    .homesd_prof {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .sidebar_contacts {
+        margin: 28px 0 16px;
+    }
+    .sidebar_contacts span{
+        font-size: 14px;
+    }
+
+    .contacts_title {
+        font-size: 12px;
+    }
+
+    .sidebar_saved {
+        margin: 16px 0;
+    }
+
+    .sidebar_href img {
+        width: 20px;
+        height: 20px;
+    }
+}   

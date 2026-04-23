@@ -1,0 +1,79 @@
+.notification-wrapper {
+  min-height: 100vh;
+  font-family: 'Rubik', sans-serif;
+}
+
+.notification-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.notification-tab {
+  margin-right:40px ;
+  width: 143px;
+  padding: 10px 20px;
+  border: 1.5px solid #6C5CE7;
+  background: transparent;
+  color: #6C5CE7;
+  border-radius: 24px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.notification-tab.active {
+  background: #6C5CE7;
+  color: #fff;
+  width: 90px;
+  margin-left: 40px;
+}
+
+.notification-box {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+}
+
+.notification-image {
+  width: 320px;
+  height: 209px;
+  margin-bottom: 30px;
+}
+
+.notification-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #6C5CE7;
+  margin-bottom: 8px;
+}
+
+.notification-text {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.notification-home-button {
+  width: 170px;
+  height: 40px;
+  padding: 10px 24px;
+  border-radius: 24px;
+  border: 1.5px solid #6C5CE7;
+  background: transparent;
+  color: #6C5CE7;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.notification-home-button:hover {
+  background: #6C5CE7;
+  color: #fff;
+}

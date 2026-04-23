@@ -1,0 +1,259 @@
+header{
+    display: flex;
+    justify-content: space-between; 
+    font-size: 16px;
+    color: #fff;
+    align-items: center;
+    width: 100%;
+    height: 110px;
+    padding: 12px 212px;
+    gap: 126px;
+
+    background: linear-gradient(90deg, #6C5CE7 0%, #6C5CE7BF 75%, #A29BFE 100%);
+}
+
+.header_logo{
+    width: 100%;
+    max-width: 70px;
+}
+
+.header_frame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+}
+
+.header_input{
+    position: relative;
+    width: 100%;
+    max-width: 500px;  
+    flex-shrink: 0;
+}
+
+.header_input input {
+    width: 100%;
+    padding: 12px 0 12px 42px;
+    border-radius: 8px;
+    border: 1.5px solid transparent;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+    font-size: 16px;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.2;
+    vertical-align: middle; 
+}
+
+.header_input input::placeholder {
+    color: #6C5CE7BF;
+    font-size: 16px;
+    line-height: 1.2;
+    vertical-align: middle;
+
+}
+
+.header_icon{
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left:10px;
+    transform:translateY(-50%)
+}
+
+.header_input input:focus {
+    border-color: #6C5CE7;
+    box-shadow: 0 0 8px rgba(108, 92, 231, 0.5);
+    background-color: #fefefe;
+}
+
+.header_nav{
+    display: flex;
+    gap:48px;
+}
+
+.nav-link {
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+    align-items: center;
+    color:#fff;
+
+    transition: transform 0.3s ease;
+}
+
+.nav-link img{
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+.nav-link span{
+    margin: 10px 0;
+}
+
+.nav-link:hover{
+    transform: scale(1.1);
+}
+
+.header_iconsgroup{
+    display: flex;
+    gap: 60px;
+}
+
+.header_logout {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+    transition: transform 0.3s ease;
+}
+
+
+.header_logout:hover {
+    transform: scale(1.1);
+}
+
+.header_logout img {
+    width: 32px;
+    height: 32px;
+    color:#fff;
+}
+
+.header_group img{
+    display: block;
+    width: 38px;
+    height: 38px;
+}
+
+.header_myprofileportfolio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+.header_btn{
+    display: flex;
+    gap: 10px;
+}
+
+.btn_sing {
+    display: inline-block;
+    width: 100px;                      
+    max-width: 100%;  
+    padding: 10px;
+    font-weight: 400;
+
+    cursor: pointer;
+    background-color: transparent; 
+    border-radius: 20px;
+    font-size: 14px;
+    border: 2px solid #fff;
+    color: #fff;       
+    transition: 0.3s ease;
+    text-align: center;
+
+    transition: transform 0.3s ease;
+}
+
+.btn_sing:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 1800px){
+    header{
+        padding: 12px 150px;
+    }
+    .header_input{
+        max-width: 400px;
+    }
+    .header_nav{
+        gap: 30px;
+    }
+    .header_iconsgroup{
+        gap: 30px;
+    }
+}
+
+@media (max-width: 1600px){
+    header{
+        padding: 0 100px;
+        height: 85px;
+    }
+    
+    .header_logo {
+        max-width: 60px;
+    }
+
+    .header_frame {
+        gap: 32px;
+    }
+
+    .header_input {
+        max-width: 360px;
+    }
+
+    .header_input input {
+        padding: 10px 0 10px 38px;
+        font-size: 15px;
+    }
+
+    .header_input input::placeholder {
+        font-size: 15px;
+    }
+
+    .header_nav {
+        gap: 24px;
+    }
+
+    .nav-link img {
+        width: 28px;
+        height: 28px;
+        margin-top: 6px;
+    }
+
+    .nav-link span {
+        margin: 6px 0;
+        font-size: 14px;
+    }
+
+    .header_iconsgroup {
+        gap: 24px;
+    }
+
+    .header_logout img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .header_group img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .header_myprofileportfolio img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .header_myprofileportfolio span {
+        display: none;
+    }
+
+    .btn_sing {
+        padding: 8px;
+        font-size: 13px;
+        width: 90px;
+    }
+}

@@ -1,0 +1,285 @@
+{
+  "home": {
+    "startPost": "Start your post",
+    "photo": "Photo",
+    "video": "Video",
+    "event": "Event",
+    "like": "Like",
+    "comment": "Comment",
+    "share": "Share",
+    "send": "Send",
+    "justNow": "Just now"
+  },
+  "footer": {
+    "generalInfo": "General information",
+    "careers": "Careers",
+    "adSettings": "Ad Settings",
+    "securityCenter": "Security Center",
+    "accessibility": "Accessibility",
+    "privacy": "Privacy and Terms",
+    "mobile": "Mobile Phone",
+    "policies": "Policies for the Professional Community",
+    "sales": "Sales Solutions",
+    "ads": "Advertising Solutions",
+    "questionTitle": "Question?",
+    "questionText": "Visit our Help Center.",
+    "manageTitle": "Manage Account and Privacy",
+    "manageText": "Go to settings.",
+    "recommendTitle": "Recommendation Transparency",
+    "recommendText": "Learn more about recommended content.",
+    "language": "Language"
+  },
+  "header": {
+    "search": "Search",
+    "home": "Home",
+    "network": "Network",
+    "vacancies": "Vacancies",
+    "messages": "Messages",
+    "notification": "Notification",
+    "myProfile": "My Profile",
+    "signIn": "Sign In",
+    "signUp": "Sign Up"
+  },
+  "sidebar": {
+    "contacts": "Contacts",
+    "expandContacts": "Expand your network of contacts",
+    "savedElements": "Saved elements",
+    "manageNetwork": "Manage your network of contacts",
+    "peopleFollow": "People you follow",
+    "groups": "Groups",
+    "events": "Events",
+    "pages": "Pages"
+  },
+  "posts": {
+    "post1": {
+      "author": "Christian Nolan",
+      "role": "Junior UI/UX Designer · Microsoft",
+      "time": "2h ago",
+      "text": "“The dumbest mistake is viewing design as something you do at the end of the process to tidy up the mess...” – Tom Peterson"
+    },
+    "post2": {
+      "author": "Jonathan Matthews",
+      "role": "UI/UX Designer · RyanAir",
+      "time": "3h ago",
+      "text": "Users will tell you what they think they want. Users will tell you what they think you want to hear... – Adam Judge"
+    },
+    "you": {
+      "author": "You",
+      "role": "Junior UI/UX Designer · Microsoft"
+    }
+  },
+  "chat": {
+  "messages": "Messages",
+  "searchMessages": "Search messages",
+  "sorted": "Sorted",
+  "other": "Other",
+  "archived": "Archived",
+  "noMessages": "No messages yet",
+  "contactMember": "Contact a member and start a discussion",
+  "sendMessage": "Send a message",
+  "newMessage": "New message",
+  "keepName": "Keep a name or multiple names",
+  "recommended": "Recommended",
+  "you": "YOU",
+  "writeSomething": "Write something..."
+
+},
+"profile": {
+  "phone": "Phone Number",
+  "email": "Email Address",
+  "positionDetails": "Senior Design Manager • Microsoft<br />2022 – now (3 years)",
+  "position": "Current Position",
+  "educationDetails": "University of Texas, Austin (UT Austin)<br />Bachelor of Fine Arts (B.F.A.) 2011–2015<br />Master of Fine Arts (M.F.A.) 2015 – 2017",
+  "education": "Education",
+  "birthDate": "Birth Date",
+  "birthDateValue": "10 June, 1994",
+  "website": "Website"
+},
+"landing": {
+  "welcome": "Welcome to the community specialists!",
+  "loginGoogle": "Login with Google",
+  "loginEmail": "Login by email address",
+  "terms": "By clicking \"Continue\" to join or sign in, you agree to the terms of the LinkedIn User Agreement, Privacy Policy, and Cookie Policy.",
+  "notMember": "Not on LinkedIn?",
+  "join": "Join",
+  "findVacancy": "Find a suitable vacancy or internship",
+  "postVacancyTitle": "Post your vacancy so millions of people can see it",
+  "postVacancyBtn": "Post a vacancy",
+  "discoverTitle": "Discover the best software tools",
+  "discoverText": "Connect with buyers who have first-hand experience to find the best products for you.",
+  "connectTitle": "Connect with your colleagues, classmates and friends on LinkedIn.",
+  "login": "Login",
+  "tags": {
+    "engineering": "Engineering",
+    "business": "Business development",
+    "finance": "Finance",
+    "admin": "Administrative Assistant",
+    "retail": "Retail employee",
+    "helpdesk": "Help Desk",
+    "operations": "Operations",
+    "it": "Information Technology",
+    "marketing": "Marketing",
+    "hr": "Personnel support",
+    "education": "Education",
+    "sales": "Sales",
+    "ecommerce": "E-commerce platforms",
+    "recruiting": "Recruiting Software",
+    "crm": "Software for CRM systems",
+    "social": "Social Networking Software",
+    "hrSystems": "HR systems",
+    "pm": "Project Management Software"
+  }
+},
+"messages": {
+  "activeNow": "Active now",
+  "newMessage": "New Message",
+  "placeholder": "Write something......",
+  "now": "now"
+},
+"time": {
+  "minutesAgo": "{{count}} min ago",
+  "now": "now",
+  "minutesAgo_plural": "{{count}} min ago",
+  "hoursAgo": "{{count}} h ago",
+  "hoursAgo_plural": "{{count}} h ago",
+  "daysAgo": "{{count}} d ago",
+  "daysAgo_plural": "{{count}} d ago",
+  "weeksAgo": "{{count}} w ago",
+  "weeksAgo_plural": "{{count}} w ago",
+  "yearsAgo": "{{count}} y ago",
+  "yearsAgo_plural": "{{count}} y ago"
+},
+"profileSidebar": {
+  "name": "Nathaniel Evans",
+  "role": "Junior UI/UX Designer · Microsoft"
+},
+"profilePage": {
+  "name": "Nathaniel Evans",
+  "role": "Junior UI/UX Designer • Microsoft",
+  "location": "Klamath Falls, Oregon, USA",
+  "changeLink": "Change your custom portfolio link",
+  "editContact": "Edit contact information",
+  "openTo": "Open to",
+  "addSection": "Add profile section",
+  "more": "More",
+  "analytics": "Analytics",
+  "onlyYou": "Only you can see this",
+  "profileViews": "73 profile views",
+  "updateProfile": "To attract viewers, update your profile",
+  "postViews": "128 post views",
+  "startPost": "To attract more followers, start a post",
+  "showAnalytics": "Show all analytics",
+  "experience": "Experience",
+  "experienceText": "Show everyone your achievement and get twice as many profile and contact information views",
+  "position": "Position",
+  "organization": "Organization",
+  "duration": "2012 – now",
+  "addExperience": "Add experience",
+  "education": "Education",
+  "university": "University of California, Los Angeles (UCLA)",
+  "eduYears": "2014–2018",
+  "skills": "Skills",
+  "skillsDesc": "Communicate your readiness for new opportunities – 50% of employers use skills data to fill their positions",
+  "communication": "Communication skills",
+  "technical": "Technical skills",
+  "addSkills": "Add skills"
+},
+"network": {
+  "newConnections": "New Connections",
+  "event": "Event",
+  "peopleIn": "PEOPLE IN THE “UI/UX DESIGN” YOU MAY KNOW",
+  "makeContact": "Make contact",
+  "filters": {
+    "all": "All",
+    "vacancies": "Vacancies",
+    "publications": "My publications",
+    "mentions": "Mentions"
+  },
+  "noUpdates": "No recent updates",
+  "expandUpdates": "As your network of contacts expands, you will receive more updates.",
+  "expandContacts": "Expand network of contacts"
+},
+"networkPeople": {
+  "person1": {
+    "name": "Девід Джонсон",
+    "title": "Головний UI/UX дизайнер",
+    "username": "@JonsonCPDR"
+  },
+  "person2": {
+    "name": "Дункан Каллахан",
+    "title": "UI/UX дизайнер",
+    "username": "@CallahanDesign"
+  },
+  "person3": {
+    "name": "Джошуа Кортес",
+    "title": "UI/UX дизайнер",
+    "username": "@JoshuaCortezUIUX"
+  },
+  "person4": {
+    "name": "Дженніфер О'Браян",
+    "title": "UI/UX дизайнер",
+    "username": "@JenniferOBrian87"
+  },
+  "person5": {
+    "name": "Емма Найт",
+    "title": "Старший UI/UX дизайнер",
+    "username": "@realemmaknight"
+  },
+  "person6": {
+    "name": "Майкл Кеннеді",
+    "title": "Молодший UI/UX дизайнер",
+    "username": "@kennedylux"
+  }
+},
+"notification": {
+  "filters": {
+    "all": "All",
+    "career": "Career changes",
+    "birthdays": "Birthdays",
+    "education": "Education"
+  },
+  "noNew": "No new notifications",
+  "checkHome": "Check out the other updates on the home page",
+  "homeButton": "Home page"
+},
+"vacancies": {
+  "bestSelection": "Selection of the best vacancies",
+  "subtitle": "Based on your profile, settings and activity, such as applications submitted, searches and saves",
+  "showAll": "Show all",
+  "recommendedQueries": "Recommended job search queries",
+  "tags": {
+    "marketingManager": "marketing manager",
+    "hr": "HR",
+    "legal": "legal",
+    "sales": "sales",
+    "google": "Google",
+    "analyst": "analyst",
+    "amazon": "Amazon"
+  },
+  "designerTitle": "Graphic designer",
+  "designerSubtitle": "Casas Adobes, Arizona, United States (within 25 miles)",
+  "meta": "2 weeks ago",
+  "candidates": "Be among the candidates",
+  "companies": {
+    "walmart": "Walmart",
+    "varsity": "Varsity Tutors, a Nardy Company",
+    "dribbble": "Dribbble",
+    "freshworks": "Freshworks"
+  },
+  "locations": {
+    "denison": "Walmart - Denison, AL",
+    "lasVegas": "Walmart - Las Vegas, NM",
+    "varsityRemote": "Varsity Tutors, a Nardy Company • United States (Remote)",
+    "dribbbleRemote": "Dribbble • United States (Remote)",
+    "freshworksRemote": "Freshworks • Florianópolis, Santa Catarina, Brazil (Remote)"
+  }
+}
+
+
+
+
+
+
+
+
+}

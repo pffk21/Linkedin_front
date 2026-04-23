@@ -1,0 +1,161 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    padding: 48px 0;
+    font-size: 16px;
+
+    line-height: 1.5;
+    gap: 105px;
+    color: #fff;
+
+    background-color: #6C5CE7;
+}
+
+.footer-shadow{
+    box-shadow: 0 -150px 300px -50px rgba(86, 72, 195, 0.7);
+    z-index: 10;
+}
+
+.footer_info{
+    display: flex;
+    gap: 64px;
+}
+
+.footer_column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_column li {
+    font-weight: 400px;
+    font-size: 16px;
+    margin-bottom: 24px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.footer_column li:hover {
+    color: #000;
+}
+
+
+.footer_settings {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer_set {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 12px;
+
+    transition: color 0.2s ease;
+}
+
+.footer_set:hover {
+    color: #000;
+}
+
+
+.footer_set img {
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 0;
+    padding: 0;
+}
+
+.footer_set_text span {
+    display: block;
+    font-size: 13px;
+}
+
+.footer_set_text strong {
+    font-weight: 500;
+}
+
+
+
+.footer_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_form select {
+  width: 265px;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23666' height='12' viewBox='0 0 24 24' width='12' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
+
+.footer_form select:focus {
+  border-color: #0073b1;
+  box-shadow: 0 0 0 3px rgba(0, 115, 177, 0.2);
+}
+
+.footer_form select option {
+  padding: 10px;
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+}
+
+@media (max-width: 1600px) {
+  .footer {
+    padding: 36px 0;
+    font-size: 14px;
+    gap: 70px;
+  }
+
+  .footer_info {
+    gap: 48px;
+  }
+
+  .footer_column li {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .footer_settings {
+    gap: 16px;
+  }
+
+  .footer_set {
+    gap: 10px;
+  }
+
+  .footer_set img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .footer_set_text span {
+    font-size: 12px;
+  }
+
+  .footer_form select {
+    width: 220px;
+    height: 36px;
+    font-size: 13px;
+    background-position: right 8px center;
+    background-size: 10px;
+  }
+
+  .footer_form select option {
+    font-size: 13px;
+    padding: 8px;
+  }
+}

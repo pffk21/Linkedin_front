@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+ 
+.modal-content {
+  width: 900px;             
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;     
+}
+
+.close_btn {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.form {
+  flex: 1;
+  overflow: hidden;   
+}
+.form-note {
+  color: #6C5CE7;       
+  font-size: 14px;
+  margin-bottom: 12px;
+  font-weight: 100;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.form label {
+  display: block;
+  font-size: 16px;
+  color: #6C5CE7;
+  margin-bottom: 12px;
+  font-weight: 100;
+}
+
+.form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #6C5CE7;
+  border-radius: 8px;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.row label {
+  flex: 1;
+}
+.form input:focus {
+  border-color: #7f56d9; 
+  outline: none; 
+}
+.save-btn {
+  align-self: flex-start;
+  width: 160px;
+  height: 40px;
+  margin-top: 12px;
+  padding: 10px 16px;
+  background-color: #6C5CE7;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  float: right;
+  margin-top: 60px;
+}
+.skills{
+    font-size: 20px;
+    margin-top: -15px;
+    margin-bottom: 5px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding-right: 32px; 
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.input-icon {
+  position: absolute;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  margin-top: -10px;
+}
+
+
+input.error-input {
+  border: 1.5px solid red !important;
+  background-color: #ffecec;
+}
+
+span.error {
+  color: red;
+  font-size: 14px;
+  margin-left: 10px;
+
+  display: block;
+}
+

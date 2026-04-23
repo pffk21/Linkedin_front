@@ -1,0 +1,276 @@
+{
+  "home": {
+    "startPost": "Rozpocznij swój post",
+    "photo": "Zdjęcie",
+    "video": "Wideo",
+    "event": "Wydarzenie",
+    "like": "Lubię to",
+    "comment": "Komentarz",
+    "share": "Udostępnij",
+    "send": "Wyślij",
+    "justNow": "Przed chwilą"
+  },
+  "footer": {
+    "generalInfo": "Informacje ogólne",
+    "careers": "Kariera",
+    "adSettings": "Ustawienia reklam",
+    "securityCenter": "Centrum bezpieczeństwa",
+    "accessibility": "Dostępność",
+    "privacy": "Prywatność i warunki",
+    "mobile": "Telefon komórkowy",
+    "policies": "Zasady społeczności zawodowej",
+    "sales": "Rozwiązania sprzedażowe",
+    "ads": "Rozwiązania reklamowe",
+    "questionTitle": "Pytanie?",
+    "questionText": "Odwiedź nasze Centrum pomocy.",
+    "manageTitle": "Zarządzanie kontem i prywatnością",
+    "manageText": "Przejdź do ustawień.",
+    "recommendTitle": "Przejrzystość rekomendacji",
+    "recommendText": "Dowiedz się więcej o rekomendowanej treści.",
+    "language": "Język"
+  },
+  "header": {
+    "search": "Szukaj",
+    "home": "Strona główna",
+    "network": "Sieć",
+    "vacancies": "Oferty pracy",
+    "messages": "Wiadomości",
+    "notification": "Powiadomienia",
+    "myProfile": "Mój profil",
+    "signIn": "Zaloguj się",
+    "signUp": "Zarejestruj się"
+  },
+  "sidebar": {
+    "contacts": "Kontakty",
+    "expandContacts": "Rozszerz swoją sieć kontaktów",
+    "savedElements": "Zapisane elementy",
+    "manageNetwork": "Zarządzaj swoją siecią kontaktów",
+    "peopleFollow": "Osoby, które obserwujesz",
+    "groups": "Grupy",
+    "events": "Wydarzenia",
+    "pages": "Strony"
+  },
+  "posts": {
+    "post1": {
+      "author": "Christian Nolan",
+      "role": "Młodszy projektant UI/UX · Microsoft",
+      "time": "2 godz. temu",
+      "text": "„Najgłupszy błąd to traktowanie designu jako czegoś, co robi się na końcu procesu, aby posprzątać bałagan...” – Tom Peterson"
+    },
+    "post2": {
+      "author": "Jonathan Matthews",
+      "role": "Projektant UI/UX · RyanAir",
+      "time": "3 godz. temu",
+      "text": "Użytkownicy powiedzą ci, co ich zdaniem chcą. Użytkownicy powiedzą ci to, co ich zdaniem chcesz usłyszeć... – Adam Judge"
+    },
+    "you": {
+      "author": "Ty",
+      "role": "Młodszy projektant UI/UX · Microsoft"
+    }
+  },
+  "chat": {
+    "messages": "Wiadomości",
+    "searchMessages": "Szukaj wiadomości",
+    "sorted": "Posortowane",
+    "other": "Inne",
+    "archived": "Zarchiwizowane",
+    "noMessages": "Brak wiadomości",
+    "contactMember": "Skontaktuj się z członkiem i rozpocznij dyskusję",
+    "sendMessage": "Wyślij wiadomość",
+    "newMessage": "Nowa wiadomość",
+    "keepName": "Podaj jedno lub kilka imion",
+    "recommended": "Polecane",
+    "you": "TY",
+    "writeSomething": "Napisz coś..."
+  },
+  "profile": {
+    "phone": "Numer telefonu",
+    "email": "Adres e-mail",
+    "position": "Obecne stanowisko",
+    "positionDetails": "Starszy menedżer ds. projektowania • Microsoft<br />2022 – teraz (3 lata)",
+    "education": "Wykształcenie",
+    "educationDetails": "Uniwersytet Kalifornijski w Los Angeles (UCLA)<br />Bachelor of Fine Arts (B.F.A.) 2011–2015<br />Master of Fine Arts (M.F.A.) 2015 – 2017",
+    "birthDate": "Data urodzenia",
+    "birthDateValue": "10 czerwca 1994",
+    "website": "Strona internetowa"
+  },
+  "landing": {
+    "welcome": "Witamy w społeczności specjalistów!",
+    "loginGoogle": "Zaloguj się przez Google",
+    "loginEmail": "Zaloguj się przez e-mail",
+    "terms": "Klikając „Kontynuuj”, zgadzasz się na Regulamin, Politykę prywatności i Politykę plików cookie LinkedIn.",
+    "notMember": "Nie masz konta?",
+    "join": "Dołącz",
+    "findVacancy": "Znajdź odpowiednią ofertę pracy lub staż",
+    "postVacancyTitle": "Opublikuj swoją ofertę pracy, aby zobaczyły ją miliony osób",
+    "postVacancyBtn": "Dodaj ofertę",
+    "discoverTitle": "Odkryj najlepsze narzędzia programowe",
+    "discoverText": "Łącz się z użytkownikami z doświadczeniem, aby znaleźć najlepsze produkty.",
+    "connectTitle": "Połącz się ze współpracownikami, kolegami z klasy i znajomymi na LinkedIn.",
+    "login": "Zaloguj się",
+    "tags": {
+      "engineering": "Inżynieria",
+      "business": "Rozwój biznesu",
+      "finance": "Finanse",
+      "admin": "Asystent administracyjny",
+      "retail": "Pracownik handlowy",
+      "helpdesk": "Pomoc techniczna",
+      "operations": "Operacje",
+      "it": "Technologie informacyjne",
+      "marketing": "Marketing",
+      "hr": "Wsparcie personalne",
+      "education": "Edukacja",
+      "sales": "Sprzedaż",
+      "ecommerce": "Platformy e-commerce",
+      "recruiting": "Oprogramowanie rekrutacyjne",
+      "crm": "Oprogramowanie CRM",
+      "social": "Oprogramowanie społecznościowe",
+      "hrSystems": "Systemy HR",
+      "pm": "Zarządzanie projektami"
+    }
+  },
+  "messages": {
+    "activeNow": "Aktywny teraz",
+    "newMessage": "Nowa wiadomość",
+    "placeholder": "Napisz coś...",
+    "now": "teraz"
+  },
+  "time": {
+    "minutesAgo": "{{count}} min temu",
+    "minutesAgo_plural": "{{count}} min temu",
+    "now": "teraz",
+    "hoursAgo": "{{count}} godz. temu",
+    "hoursAgo_plural": "{{count}} godz. temu",
+    "daysAgo": "{{count}} dni temu",
+    "daysAgo_plural": "{{count}} dni temu",
+    "weeksAgo": "{{count}} tyg. temu",
+    "weeksAgo_plural": "{{count}} tyg. temu",
+    "yearsAgo": "{{count}} lat temu",
+    "yearsAgo_plural": "{{count}} lat temu"
+  },
+  "profileSidebar": {
+    "name": "Nathaniel Evans",
+    "role": "Młodszy projektant UI/UX · Microsoft"
+  },
+  "profilePage": {
+    "name": "Nathaniel Evans",
+    "role": "Młodszy projektant UI/UX • Microsoft",
+    "location": "Klamath Falls, Oregon, USA",
+    "changeLink": "Zmień własny link do portfolio",
+    "editContact": "Edytuj dane kontaktowe",
+    "openTo": "Otwarty na",
+    "addSection": "Dodaj sekcję profilu",
+    "more": "Więcej",
+    "analytics": "Analityka",
+    "onlyYou": "Tylko ty to widzisz",
+    "profileViews": "73 wyświetlenia profilu",
+    "updateProfile": "Aby przyciągnąć oglądających, zaktualizuj swój profil",
+    "postViews": "128 wyświetleń postów",
+    "startPost": "Aby zdobyć więcej obserwujących, rozpocznij post",
+    "showAnalytics": "Pokaż całą analitykę",
+    "experience": "Doświadczenie",
+    "experienceText": "Pokaż swoje osiągnięcia i zdobądź dwa razy więcej wyświetleń profilu i danych kontaktowych",
+    "position": "Stanowisko",
+    "organization": "Organizacja",
+    "duration": "2012 – teraz",
+    "addExperience": "Dodaj doświadczenie",
+    "education": "Wykształcenie",
+    "university": "Uniwersytet Kalifornijski w Los Angeles (UCLA)",
+    "eduYears": "2014–2018",
+    "skills": "Umiejętności",
+    "skillsDesc": "Pokaż gotowość na nowe możliwości – 50% pracodawców korzysta z danych o umiejętnościach przy rekrutacji",
+    "communication": "Umiejętności komunikacyjne",
+    "technical": "Umiejętności techniczne",
+    "addSkills": "Dodaj umiejętności"
+  },
+  "network": {
+    "newConnections": "Nowe kontakty",
+    "event": "Wydarzenie",
+    "peopleIn": "OSOBY W „UI/UX DESIGN”, KTÓRE MOŻESZ ZNAĆ",
+    "makeContact": "Nawiąż kontakt",
+    "filters": {
+      "all": "Wszystko",
+      "vacancies": "Oferty pracy",
+      "publications": "Moje publikacje",
+      "mentions": "Wzmianki"
+    },
+    "noUpdates": "Brak ostatnich aktualizacji",
+    "expandUpdates": "Wraz z rozwojem sieci kontaktów będziesz otrzymywać więcej aktualizacji.",
+    "expandContacts": "Rozszerz sieć kontaktów"
+  },
+  "networkPeople": {
+    "person1": {
+      "name": "David Jonson",
+      "title": "Lead UI/UX Designer",
+      "username": "@JonsonCPDR"
+    },
+    "person2": {
+      "name": "Duncan Callahan",
+      "title": "UI/UX Designer",
+      "username": "@CallahanDesign"
+    },
+    "person3": {
+      "name": "Joshua Cortez",
+      "title": "UI/UX Designer",
+      "username": "@JoshuaCortezUIUX"
+    },
+    "person4": {
+      "name": "Jennifer O'Brian",
+      "title": "UI/UX Designer",
+      "username": "@JenniferOBrian87"
+    },
+    "person5": {
+      "name": "Emma Knight",
+      "title": "Senior UI/UX Designer",
+      "username": "@realemmaknight"
+    },
+    "person6": {
+      "name": "Michael Kennedy",
+      "title": "Junior UI/UX Designer",
+      "username": "@kennedylux"
+    }
+  },
+  "notification": {
+    "filters": {
+      "all": "Wszystko",
+      "career": "Zmiany kariery",
+      "birthdays": "Urodziny",
+      "education": "Edukacja"
+    },
+    "noNew": "Brak nowych powiadomień",
+    "checkHome": "Sprawdź inne aktualizacje na stronie głównej",
+    "homeButton": "Strona główna"
+  },
+  "vacancies": {
+    "bestSelection": "Wybór najlepszych ofert pracy",
+    "subtitle": "Na podstawie twojego profilu, ustawień i aktywności, takich jak złożone aplikacje, wyszukiwania i zapisy",
+    "showAll": "Pokaż wszystkie",
+    "recommendedQueries": "Polecane zapytania wyszukiwania pracy",
+    "tags": {
+      "marketingManager": "kierownik marketingu",
+      "hr": "HR",
+      "legal": "prawo",
+      "sales": "sprzedaż",
+      "google": "Google",
+      "analyst": "analityk",
+      "amazon": "Amazon"
+    },
+    "designerTitle": "Grafik",
+    "designerSubtitle": "Casas Adobes, Arizona, USA (w promieniu 25 mil)",
+    "meta": "2 tygodnie temu",
+    "candidates": "Bądź wśród kandydatów",
+    "companies": {
+      "walmart": "Walmart",
+      "varsity": "Varsity Tutors, spółka Nardy",
+      "dribbble": "Dribbble",
+      "freshworks": "Freshworks"
+    },
+    "locations": {
+      "denison": "Walmart – Denison, AL",
+      "lasVegas": "Walmart – Las Vegas, NM",
+      "varsityRemote": "Varsity Tutors, spółka Nardy • Stany Zjednoczone (zdalnie)",
+      "dribbbleRemote": "Dribbble • Stany Zjednoczone (zdalnie)",
+      "freshworksRemote": "Freshworks • Florianópolis, Santa Catarina, Brazylia (zdalnie)"
+    }
+  }
+}
