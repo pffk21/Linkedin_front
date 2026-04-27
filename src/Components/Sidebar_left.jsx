@@ -101,7 +101,7 @@ export function Sidebar_left_home() {
           src={photoSrc} 
           alt={userName} 
           onError={handleImageError}
-          className='home_info'
+          className='homesd_info'
         />
         <div className='homesd_name'>{userName}</div>
         <div className='homesd_prof'>{userRole}</div>

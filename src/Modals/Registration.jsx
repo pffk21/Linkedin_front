@@ -2,9 +2,11 @@ import React, { useContext, useEffect, useState } from 'react';
 import './Registration.css';
 import { useNavigate } from 'react-router-dom';
 import AppContext from '../AppContext';
+import { Alert } from '../Components/Alert';
 
 export function Registration({ onSuccess, onSwitchToSignIn }) {
   const navigate = useNavigate();
+  const [serverError, setServerError] = useState("");
   const { request, backUrl } = useContext(AppContext);
 
   const [formData, setFormData] = useState({
@@ -37,6 +39,7 @@ export function Registration({ onSuccess, onSwitchToSignIn }) {
     if (!formData.password) newErrors.password = 'Password is required';
     if (!formData.confirmPassword) newErrors.confirmPassword = 'Confirm Password is required';
     if (!formData.profileImageUrl) newErrors.profileImageUrl = 'Profile image is required';
+    if (!formData.profileImageUrl) newErrors.birthDate = 'Profile image is required';
 
     const passwordRequirements = [
       { test: /.{8,}/, message: 'Password must be at least 8 characters' },
@@ -76,9 +79,8 @@ export function Registration({ onSuccess, onSwitchToSignIn }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setServerError(""); 
     if (!validate()) return;
-
-    localStorage.setItem("pendingEmail", formData.email);
 
     const dataToSend = new FormData(e.target);
 
@@ -86,26 +88,49 @@ export function Registration({ onSuccess, onSwitchToSignIn }) {
       method: "POST",
       body: dataToSend
     })
-      .then(response => {
+      .then(async (response) => { 
         if (!response.ok) {
-          return response.text().then(text => {
-            throw new Error(text);
-          });
+          let errorMessage = "An error occurred";
+          
+          const text = await response.text();
+          
+          try {
+            const json = JSON.parse(text);
+            errorMessage = json.message || json.error || text;
+          } catch {
+            errorMessage = text;
+          }
+
+          if (response.status === 409) throw new Error("This email is already taken. Try another one.");
+          if (response.status === 400) throw new Error(errorMessage || "Please check your input data.");
+          if (response.status === 413) throw new Error("The profile picture is too large.");
+          if (response.status >= 500) throw new Error("Server is having trouble. Please try again later.");
+          
+          throw new Error(errorMessage || `Error: ${response.status}`);
         }
+        
         return response.json();
       })
       .then(data => {
-        console.log("Status:", data.Status);
+        localStorage.setItem("pendingEmail", formData.email);
         navigate("/verification");
       })
       .catch(err => {
-        console.error(err);
-        alert(err.message);
+        console.error("Full Error Info:", err);
+
+        if (err.message === "Failed to fetch") {
+          setServerError("Cannot connect to server. Is your Backend running at " + backUrl + "?");
+        } else {
+          setServerError(err.message); 
+        }
       });
   };
-
   return (
     <div className="logo-container1">
+      <Alert 
+        message={serverError} 
+        onClose={() => setServerError("")} 
+      />
       <img src="./Form_img/Logo.png" alt="Logo" className="form-logo1" />
       <div className="form-container">
         <h2 className="welcome-text1">

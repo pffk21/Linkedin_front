@@ -2,9 +2,11 @@ import React, { useContext, useRef, useState } from 'react';
 import './Verification.css';
 import { useNavigate } from 'react-router-dom';
 import AppContext from '../AppContext';
+import { Alert } from '../Components/Alert';
 
 export function Verification({ onSubmit, onBack }) {
   const navigate = useNavigate(); 
+  const [serverError, setServerError] = useState("");
 
   const {backUrl} = useContext(AppContext);
 
@@ -67,13 +69,13 @@ export function Verification({ onSubmit, onBack }) {
       console.error("Verification error:", error.message);
       console.log("email: ", email);
       console.log("code: ", fullCode);
-      alert(error.message);
+      setServerError(error.message);
     }
     } catch (err) {
       console.error("Unexpected error:", err);
       console.log("email: ", email);
       console.log("code: ", fullCode);
-      alert("Something went wrong. Try again later.");
+      setServerError("Something went wrong. Try again later.");
     }
 
     onSubmit?.(fullCode);
@@ -82,6 +84,10 @@ export function Verification({ onSubmit, onBack }) {
 
   return (
     <div className="logo-container1">
+      <Alert 
+              message={serverError} 
+              onClose={() => setServerError("")} 
+            />
       <img src="./Form_img/Logo.png" alt="Logo" className="form-logo1" />
     <div className="verification-container1">
       <h3>One last step</h3>

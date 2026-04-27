@@ -1,9 +1,11 @@
 import React, { useRef, useState } from 'react';
 import './Verification.css';
 import { useNavigate } from 'react-router-dom';
+import { Alert } from '../Components/Alert';
 
 export function EntranceVerification({ onSubmit, onBack }) {
   const navigate = useNavigate(); 
+  const [serverError, setServerError] = useState("");
   const inputs = useRef([]);
   const [code, setCode] = useState(Array(5).fill(''));
 
@@ -43,6 +45,10 @@ export function EntranceVerification({ onSubmit, onBack }) {
 
   return (
     <div className="logo-container1">
+      <Alert 
+              message={serverError} 
+              onClose={() => setServerError("")} 
+            />
       <img src="./Form_img/Logo.png" alt="Logo" className="form-logo1" />
     <div className="verification-container1">
       <h3>One last step</h3>

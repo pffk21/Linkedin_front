@@ -2,11 +2,12 @@ import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Registration.css';
 import AppContext from '../AppContext';
-
+import { Alert } from '../Components/Alert';
 
 export function Entrance({ onSuccess, onSwitchToSignUp }) {
   const navigate = useNavigate(); 
   const { backUrl, request, setToken } = useContext(AppContext);
+  const [serverError, setServerError] = useState("");
 
   const [formData, setFormData] = useState({
     email: '',
@@ -67,6 +68,10 @@ export function Entrance({ onSuccess, onSwitchToSignUp }) {
 
   return (
     <div className="logo-container1">
+      <Alert 
+              message={serverError} 
+              onClose={() => setServerError("")} 
+            />
       <img src="./Form_img/Logo.png" alt="Logo" className="form-logo1" />
       <div className="form-container2">
         <h2 className="welcome-text1">
