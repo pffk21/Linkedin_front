@@ -2,6 +2,8 @@ import './Sidebar_right.css'
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useContext } from 'react';
+import AppContext from '../AppContext';
 
 export function Sidebar_right() {
   const location = useLocation();
@@ -18,6 +20,23 @@ export function Sidebar_right_main() {
   const [showChatList, setShowChatList] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const { t } = useTranslation();
+
+  const { user,backUrl } = useContext(AppContext);
+  
+  const FALLBACK_PHOTO_URL = './Header_img/Ellipse.svg';
+  let photoSrc = FALLBACK_PHOTO_URL;
+  const avatar = user?.avatarPhoto || user?.AvatarPhoto;
+
+  if (avatar) {
+    const baseUrl = backUrl ? backUrl.replace(/\/$/, '') : '';
+    if (avatar.startsWith('http') || avatar.startsWith('./')) {
+      photoSrc = avatar;
+    } else if (!avatar.includes('/')) {
+      photoSrc = `${baseUrl}/Storage/Item/${avatar}`;
+    } else {
+      photoSrc = `${baseUrl}${avatar.startsWith('/') ? avatar : '/' + avatar}`;
+    }
+  }
 
   const chats = [
     { id: 1, name: 'Marcus Dias', message: 'YOU: Thank you! Good luck.', time: '45 min', avatar: './ChatSidebar_img/Avatar1.png' },
@@ -39,7 +58,15 @@ export function Sidebar_right_main() {
     <aside className='sidebar_right'>
       <div className='sidebar_header'>
         <div className='right_title'>
-          <img src='./Header_img/Ellipse.svg' />
+          <img 
+            src={photoSrc} 
+            alt="my avatar" 
+            onError={(e) => {
+              if (!e.target.src.includes('Ellipse.svg')) {
+                e.target.src = FALLBACK_PHOTO_URL;
+              }
+            }}
+          />
           <span>{t("chat.messages")}</span>
         </div>
         <div className='sidebar_icons'>

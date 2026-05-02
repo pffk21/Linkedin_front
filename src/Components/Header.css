@@ -142,6 +142,13 @@ header{
     text-decoration: none;
     line-height: 1.5;
 }
+.header_myprofileportfolio img {
+    display: block;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
 
 .header_btn{
     display: flex;
@@ -240,11 +247,6 @@ header{
     .header_group img {
         width: 32px;
         height: 32px;
-    }
-
-    .header_myprofileportfolio img {
-        width: 48px;
-        height: 48px;
     }
 
     .header_myprofileportfolio span {

@@ -57,7 +57,7 @@ function decodeJwtPayload(token) {
 function App() {
   const [token, setTokenState] = useState(localStorage.getItem('authToken'));
   const [user, setUser] = useState(null);
-
+  const backUrl = "https://localhost:7294";
 
   const setToken = (newToken) =>{
     setTokenState(newToken);
@@ -70,16 +70,38 @@ function App() {
 
   useEffect(() => {
     if (token) {
-
       const decoded = decodeJwtPayload(token);
+      if (decoded && decoded.exp && decoded.exp < Date.now() / 1000) {
+        console.warn("Токен истек");
+        logout();
+        return;
+      }
       setUser(decoded);
+
+      fetch(`${backUrl}/api/user/info`, {
+        headers: { 
+          'Authorization': 'Bearer ' + token,
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(r => r.ok ? r.json() : Promise.reject('Failed to load profile'))
+      .then(j => {
+        const actualData = j.data || j.Data;
+        if (actualData) {
+          setUser(prev => ({ 
+            ...prev, 
+            avatarPhoto: actualData.AvatarPhoto || actualData.avatarPhoto,
+            aboitSection: actualData.AboitSection || actualData.aboitSection
+          }));
+        }
+      })
+      .catch(err => console.error("Ошибка при подгрузке аватара в App.js:", err));
+
     } else {
       setUser(null);
     }
   }, [token]);
-
-  const backUrl = "https://localhost:7294";
-
+  
   
   const request = (url, conf) => new Promise((resolve, reject) => {
     if (url.startsWith('/')) {
@@ -101,7 +123,6 @@ function App() {
         conf.headers['Content-Type'] = 'application/json';
     }
 
-
     fetch(url, conf)
       .then(r => {
           if (r.status === 401) {
@@ -115,7 +136,6 @@ function App() {
         const isActuallyOk = j.status?.isOk || j.status?.isOK || j.status?.code === 200;
 
         if (isActuallyOk) {
-
           resolve(j); 
           return;
         } 

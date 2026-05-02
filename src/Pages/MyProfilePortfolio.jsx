@@ -1,18 +1,87 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import AddExperience from "../Modals/AddExperience";
 import "./MyProfilePortfolio.css";
+import AppContext from '../AppContext';
+
 
 export function MyProfilePortfolio() {
   const { t } = useTranslation();
   const [modalOpen, setModalOpen] = useState(false);
   const [showFullImage, setShowFullImage] = useState(false);
 
+  const { backUrl, user, token, request } = useContext(AppContext);
+
+  const [profileData, setProfileData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    if (!token) {
+        setIsLoading(false);
+        return; 
+    }
+
+    const fetchProfile = async () => {
+      setIsLoading(true);
+      setError(null);
+      try {
+        const response = await request('/api/user/info');
+        
+        const actualData = response?.data || response?.Data;
+        if (actualData) {
+          setProfileData(actualData);
+        }
+      } catch (err) {
+        console.log("Данные пойманы в catch:", err);
+
+        const recoveredData = err?.data || err?.Data;
+
+        if (recoveredData) {
+          setProfileData(recoveredData);
+          setError(null); 
+        } else {
+          setError(err.message || "Ошибка загрузки");
+        }
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchProfile();
+  }, [token, request]);
+
   const handlePhotoClick = (e) => {
     if (e.target.className === 'overlay') {
       setShowFullImage(false);
     }
   };
+  const FALLBACK_PHOTO_URL = './Header_img/Ellipse.svg';
+  let photoSrc = FALLBACK_PHOTO_URL;
+  
+  // Берем путь, который уже содержит /Storage/Item/ (с бэкенда)
+  const avatarPath = profileData?.avatarPhoto || profileData?.AvatarPhoto; 
+
+  if (avatarPath) {
+      const baseUrl = backUrl ? backUrl.replace(/\/$/, '') : ''; 
+      
+      // Если это локальная заглушка или внешний сайт
+      if (avatarPath.startsWith('http') || avatarPath.startsWith('./')) {
+          photoSrc = avatarPath;
+      } else {
+          // Бэкенд уже собрал путь, просто клеим к localhost!
+          photoSrc = `${baseUrl}${avatarPath}`;
+      }
+  }
+
+  const handleImageError = (e) => {
+      if (!e.target.src.includes('Ellipse.svg')) {
+          e.target.src = FALLBACK_PHOTO_URL;
+      }
+  };
+  const userName = profileData?.name || profileData?.Name || t("profilePage.name"); 
+  const userRole = profileData?.aboitSection || profileData?.AboitSection || t("profilePage.role");
+  const userLocation = profileData?.location || profileData?.Location || t("profilePage.location");
 
   return (
     <div className="main-wrapper">
@@ -24,16 +93,18 @@ export function MyProfilePortfolio() {
             </div>
           </div>
           <div className="profile-img">
-            <img src="./MyProfilePortfolio_img/1.jpg" alt="profile" />
+            <img src={photoSrc} alt="profile" onError={handleImageError} />
           </div>
           <div className="karandash">
             <img src="./MyProfilePortfolio_img/3.png" alt="edit" />
           </div>
           <div className="card1-body">
             <div className="user-info">
-              <h2>{t("profilePage.name")}</h2>
-              <p className="job-title">{t("profilePage.role")}</p>
-              <p className="location">{t("profilePage.location")}</p>
+              {/* Выводим динамические данные вместо статичных переводов */}
+              <h2>{userName}</h2>
+              <p className="job-title">{userRole}</p>
+              <p className="location">{userLocation}</p>
+              
               <a href="#" className="profile-link">
                 {t("profilePage.changeLink")}
               </a>

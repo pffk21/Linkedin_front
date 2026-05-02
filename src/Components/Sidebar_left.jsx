@@ -38,21 +38,18 @@ export function Sidebar_left_home() {
       try {
         const response = await request('/api/user/info');
         
-        // Если request сработал нормально (редкий случай при текущей настройке)
         const actualData = response?.data || response?.Data;
         if (actualData) {
           setProfileData(actualData);
         }
       } catch (err) {
-        // Твой случай: данные прилетели в блок catch
         console.log("Данные пойманы в catch:", err);
 
-        // Проверяем, есть ли внутри этого "err" данные пользователя
         const recoveredData = err?.data || err?.Data;
 
         if (recoveredData) {
           setProfileData(recoveredData);
-          setError(null); // Обязательно убираем ошибку, так как данные мы нашли
+          setError(null); 
         } else {
           setError(err.message || "Ошибка загрузки");
         }

@@ -2,10 +2,29 @@ import { useNavigate } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import "./Header.css"
+import { useContext } from 'react';
+import AppContext from '../AppContext';
 
 export function Header({ maximal = false }) {
   const navigate = useNavigate(); 
   const { t } = useTranslation();
+
+  const {user, backUrl} = useContext(AppContext); 
+
+  const FALLBACK_PHOTO_URL = './Header_img/Ellipse.svg';
+  let photoSrc = FALLBACK_PHOTO_URL;
+  const avatar = user?.avatarPhoto || user?.AvatarPhoto;
+
+  if (avatar) {
+    const baseUrl = backUrl ? backUrl.replace(/\/$/, '') : '';
+    if (avatar.startsWith('http') || avatar.startsWith('./')) {
+      photoSrc = avatar;
+    } else if (!avatar.includes('/')) {
+      photoSrc = `${baseUrl}/Storage/Item/${avatar}`;
+    } else {
+      photoSrc = `${baseUrl}${avatar.startsWith('/') ? avatar : '/' + avatar}`;
+    }
+  }
 
   const handleSignIn = () => {
     navigate('/entrance'); 
@@ -63,7 +82,15 @@ export function Header({ maximal = false }) {
 
           <nav className="header_iconsgroup">
             <NavLink to="/myProfilePortfolio" className="header_myprofileportfolio">
-              <img src="Header_img/Ellipse.svg" alt="group" />
+              <img 
+                src={photoSrc} 
+                alt="my avatar" 
+                onError={(e) => {
+                  if (!e.target.src.includes('Ellipse.svg')) {
+                    e.target.src = FALLBACK_PHOTO_URL;
+                  }
+                }}
+              />
               <span>{t("header.myProfile")}</span>
             </NavLink>
             <NavLink to="/Linkidin" className="header_logout">
